@@ -78,3 +78,4 @@ public class JpaMain {
         emf.close();
     }
 }
+// 커밋 테스트
