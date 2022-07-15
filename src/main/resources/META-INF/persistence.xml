@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <persistence-unit name="hello">
+        <properties>
+            <!-- 필수 속성 -->
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <!-- 옵션 -->
+<!--            hibernate.show_sql 이걸로 sql구문 콘솔창에 출력-->
+            <property name="hibernate.show_sql" value="true"/>
+<!--            hibernate.format_sql 이걸로 sql 포맷으로 보기 좋게 콘솔창에 출력-->
+            <property name="hibernate.format_sql" value="true"/>
+<!--            hibernate.use_sql_comments 이걸로 이 쿼리가 왜 실행 됐는지 알려줌-->
+            <property name="hibernate.use_sql_comments" value="true"/>
+<!--            데이터베이스 스키마 자동 생성 옵션-->
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+        </properties>
+    </persistence-unit>
+</persistence>
